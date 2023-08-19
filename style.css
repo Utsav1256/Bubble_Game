@@ -64,6 +64,7 @@ html {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  padding-left: 5px;
 }
 
 .bubble {
