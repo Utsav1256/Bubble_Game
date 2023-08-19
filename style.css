@@ -23,6 +23,8 @@ html {
   width: 80%;
   height: 80%;
   background-color: green;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 #pnel_top {
@@ -42,9 +44,11 @@ html {
   align-items: center;
   gap: 10px;
 }
+
 .elem h2 {
   color: #fff;
 }
+
 .box {
   background-color: #fff;
   padding: 10px;
@@ -52,4 +56,10 @@ html {
   color: rgb(11, 101, 11);
   font-size: 20px;
   font-weight: 700;
+}
+
+#panel_bottom {
+  width: 100%;
+  height: calc(100% - 90px);
+  background-color: #000;
 }
