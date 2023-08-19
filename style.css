@@ -78,3 +78,7 @@ html {
   font-size: 25px;
   font-weight: 600;
 }
+
+.bubble:hover {
+  background-color: rgb(7, 75, 52);
+}
