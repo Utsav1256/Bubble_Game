@@ -22,15 +22,15 @@ html {
 }
 
 #main #header h1 {
-  color: transparent;
+  color: antiquewhite;
   font-size: 70px;
   font-weight: 600;
   -webkit-text-stroke: 4px #073b41;
 }
 
 #main #header h1::selection {
-  color: antiquewhite;
-  background-color: #2299a6;
+  color: #2299a6;
+  background-color: antiquewhite;
 }
 #panel {
   width: 80%;
