@@ -11,6 +11,11 @@ function bubble_maker() {
 
   btm_panel.innerHTML = cluster;
 }
+function genHit() {
+  document.querySelector("#hit").textContent = Math.floor(
+    Math.random() * 10 + 1
+  );
+}
 
 function runTimer() {
   let setTimer = 60;
@@ -26,3 +31,4 @@ function runTimer() {
 
 bubble_maker();
 runTimer();
+genHit();
