@@ -1,3 +1,5 @@
+let score = 0;
+
 function bubble_maker() {
   let cluster = "";
 
@@ -11,6 +13,7 @@ function bubble_maker() {
 
   btm_panel.innerHTML = cluster;
 }
+
 function genHit() {
   document.querySelector("#hit").textContent = Math.floor(
     Math.random() * 10 + 1
@@ -29,6 +32,12 @@ function runTimer() {
   }, 1000);
 }
 
+function incScore() {
+  score += 10;
+  document.querySelector("#score").textContent = score;
+}
+
 bubble_maker();
 runTimer();
 genHit();
+incScore();
