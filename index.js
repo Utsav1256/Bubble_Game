@@ -1,4 +1,6 @@
+let setTimer = 4;
 let score = 0;
+let hitRan = 0;
 
 function bubble_maker() {
   let cluster = "";
@@ -15,16 +17,18 @@ function bubble_maker() {
 }
 
 function genHit() {
-  document.querySelector("#hit").textContent = Math.floor(
-    Math.random() * 10 + 1
-  );
+  hitRan = Math.floor(Math.random() * 10 + 1);
+  document.querySelector("#hit").textContent = hitRan;
 }
 
 function runTimer() {
-  let setTimer = 60;
   let timer = setInterval(function () {
     if (setTimer <= 0) {
       clearInterval(timer);
+      document.querySelector(
+        "#panel_bottom"
+      ).innerHTML = `<h1>Game Over</h1> </br>
+      <h2>Your Score : ${score}</h2>`;
       return;
     }
     setTimer--;
@@ -37,7 +41,19 @@ function incScore() {
   document.querySelector("#score").textContent = score;
 }
 
+document
+  .querySelector("#panel_bottom")
+  .addEventListener("click", function (details) {
+    // console.log(details.target.textContent);
+    clickedBubble = Number(details.target.textContent);
+    if (hitRan === clickedBubble) {
+      incScore();
+      bubble_maker();
+      genHit();
+    }
+  });
+
 bubble_maker();
-runTimer();
 genHit();
-incScore();
+runTimer();
+// incScore();
