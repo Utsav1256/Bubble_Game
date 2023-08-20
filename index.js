@@ -1,4 +1,4 @@
-let setTimer = 4;
+let setTimer = 60;
 let score = 0;
 let hitRan = 0;
 
@@ -44,8 +44,8 @@ function incScore() {
 document
   .querySelector("#panel_bottom")
   .addEventListener("click", function (details) {
-    // console.log(details.target.textContent);
-    clickedBubble = Number(details.target.textContent);
+    // console.log(Number(details.target.textContent));
+    let clickedBubble = Number(details.target.textContent);
     if (hitRan === clickedBubble) {
       incScore();
       bubble_maker();
@@ -56,4 +56,3 @@ document
 bubble_maker();
 genHit();
 runTimer();
-// incScore();

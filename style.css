@@ -17,8 +17,21 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
+#main #header h1 {
+  color: transparent;
+  font-size: 70px;
+  font-weight: 600;
+  -webkit-text-stroke: 4px #073b41;
+}
+
+#main #header h1::selection {
+  color: antiquewhite;
+  background-color: #2299a6;
+}
 #panel {
   width: 80%;
   height: 80%;
@@ -67,14 +80,15 @@ html {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(rgb(47, 144, 47), rgb(10, 97, 68));
 }
 
 #panel_bottom h1 {
-  color: #fff;
+  color: #ba2424;
   font-size: 40px;
 }
 #panel_bottom h2 {
-  color: blanchedalmond;
+  color: rgb(233, 169, 73);
   font-size: 35px;
 }
 .bubble {
@@ -86,7 +100,7 @@ html {
   align-items: center;
   justify-content: center;
   color: rgb(196, 118, 15);
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
 }
 
